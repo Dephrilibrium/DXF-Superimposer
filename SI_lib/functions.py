@@ -183,7 +183,6 @@ def IterateThroughEntities(entities, dTol):
     if _nEntities <= 0:
         return
 
-    print(f"Entities found: {Fore.BLUE}{_nEntities}{Fore.RESET}")
     _dPerc = 1/_nEntities * 100
 
     _nCount = 0
@@ -191,7 +190,7 @@ def IterateThroughEntities(entities, dTol):
     for ent in entities:
         entities.remove(ent)
         _perDone += _dPerc
-        print(f"{Fore.BLUE}Checking entity[{_nCount}]:".ljust(25) + f" {Fore.RED}{ent}{Fore.RESET}".ljust(25) + f"({_nCount+1:7d}/{_nEntities:7d} = {_perDone:3.3f}%)")
+        print(f"{Fore.BLUE}Checking entity[{_nCount}]:".ljust(32) + f" {Fore.RED}{ent}{Fore.RESET}".ljust(25) + f"({_nCount+1:7d}/{_nEntities:7d} = {_perDone:3.3f}%)")
         _nCount += 1
 
         if ent.DXFTYPE == "LINE":
@@ -237,6 +236,7 @@ def DetermineDXFTypes(entities):
     dxfStats = {}
     dxfStats["Types"] = []
     dxfStats["Counts"] = []
+    dxfStats["CountAll"] = len(entities)
     for ent in entities:
         if not (dxfStats["Types"].__contains__(ent.DXFTYPE)):
             dxfStats["Types"].append(ent.DXFTYPE)
