@@ -11,14 +11,14 @@ from SI_lib.tLog import LogLine
 
 
 
-tolerance = 1e-3                                # In base-units of the DXF (test-dxf was in [mm])
+tolerance = 3                                 # In base-units of the DXF (test-dxf was in [mm])
 fNames = [                                      # Append your DXF-files here (".dxf" extension is optional!)
-r".\TestDXFs\2x Arc defined angles.dxf",
-r".\TestDXFs\2x Line, 2x Poly, 2x Arc.dxf",
-r".\TestDXFs\EasyTri.dxf",
-r".\TestDXFs\TestDrawOpened.dxf",
+# r".\TestDXFs\2x Arc defined angles.dxf",          # Test-DXF to see how arc-angles work within a dxf-file
+r".\TestDXFs\2x Line, 2x Poly, 2x Arc.dxf",       # Tolerance 3   mm
+# r".\TestDXFs\EasyTri.dxf",                        # Tolerance 3     mm
+# r".\TestDXFs\TestDrawOpened.dxf",                 # Tolerance 1e-3  mm
 ]
-showDXFs = False                                # Open figures showing the changes (before/after) -> normally only used for debug puposes
+showDXFs = True                                # Open figures showing the changes (before/after) -> normally only used for debug puposes
 
 
 
