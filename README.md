@@ -1,6 +1,6 @@
 # DXF-Superimposer
 
-At the OTH we design lithography-masks for clean room exposure processes. They are written, using a HEIDELBERG DWL 66+. The mask-designs are typically created with AutoCAD (2D), exporting the design as DXF (version r12) we design masks for that , we are using DXFs (AutoCAD with DXF-Version r12). For some reason, sometimes the design-entities (LINE, POLYLINE, ARC) not only forming closed circumfences. As the mask-design needs to be converted from DXF into for the DWL understandable files, open circumfences disables the conversion of the DXF-mask.
+At the OTH we design lithography-masks for clean room exposure processes. They are written, using a HEIDELBERG DWL 66+. The mask-designs are typically created with AutoCAD (2D) and exported as DXF (version r12). For some reason, sometimes the design-entities (LINE, POLYLINE, ARC) not forming only closed circumfences. As the mask-design needs to be converted from DXF into for the DWL understandable files, open circumfences disables the conversion of the DXF-mask.
 
 Therefore this script was developed. It searches for implemented  and possibly open entities and superimposes close located start- and endpoints, which is done by:
 * 1\.) Build a list of all supported entities (LINE, POLYLINE, ARC)
